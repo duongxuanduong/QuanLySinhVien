@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <MaHS>HS01</MaHS>
+    <HoTen>Phúc</HoTen>
+    <NgaySinh>06/01/2000</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+    <DiaChi>ABC11</DiaChi>
+    <SDT>22</SDT>
+    <MaLop>18T3</MaLop>
+  </Table>
+</NewDataSet>
