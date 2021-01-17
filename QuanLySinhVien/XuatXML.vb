@@ -4,12 +4,12 @@ Public Class XuatXML
     Dim con As New SqlConnection
     Dim con1 As New SqlConnection
     Public Sub taoketnoi()
-        Dim str_ketnoi As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
+        Dim str_ketnoi As String = "Data Source=DESKTOP-4CH846O\NGUYENHUUTUAN;Initial Catalog=QuanLySinhVien;Integrated Security=True"
         con.ConnectionString = str_ketnoi
         con.Open()
     End Sub
     Public Sub taoketnoi1()
-        Dim str_ketnoi As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
+        Dim str_ketnoi As String = "Data Source=DESKTOP-4CH846O\NGUYENHUUTUAN;Initial Catalog=QuanLySinhVien;Integrated Security=True"
         con1.ConnectionString = str_ketnoi
         con1.Open()
     End Sub
@@ -62,10 +62,8 @@ Public Class XuatXML
         cob_database.DataSource = ds.Tables(0)
         cob_database.DisplayMember = "name"
         cob_database.ValueMember = "name"
-
-        cob_database.Text = "QuanLyMamNon"
         txt_database.Text = "Quản Lý Sinh Viên"
-        txt_tenserver.Text = "DESKTOP-A8F0E3F"
+        txt_tenserver.Text = "DESKTOP-4CH846O\NGUYENHUUTUAN"
 
         Try
             Dim ds1 As New DataSet
@@ -110,5 +108,8 @@ Public Class XuatXML
         Me.Hide()
     End Sub
 
-
+    Private Sub XuatXML_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
+        Me.Hide()
+    End Sub
 End Class

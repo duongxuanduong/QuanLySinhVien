@@ -6,13 +6,8 @@ Public Class FormLop
     Private WithEvents danh_sach2 As BindingManagerBase
     Public lenh As String
 
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
+    Private Sub FormLop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        con = New ConnectionDB().connect()
     End Sub
 
 
@@ -40,7 +35,6 @@ Public Class FormLop
         tb_namhoc.Text = " "
         tb_namhoc.Enabled = True
 
-        Connection()
         xuat_maphong()
         xuat_lop()
         danh_sach_moi1(sender, e)
@@ -74,7 +68,6 @@ Public Class FormLop
         tb_tenlop.Text = " "
         tb_tenlop.Enabled = False
 
-        Connection()
         xuat_phong()
         tb_mphong.Enabled = False
 
@@ -129,9 +122,6 @@ Public Class FormLop
         cbb_mphong.DisplayMember = "MaPhong"
         cbb_mphong.ValueMember = "MaPhong"
         cbb_mphong.DataSource = table
-    End Sub
-    Private Sub FormLop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
     Private Sub bt_them_Click(sender As Object, e As EventArgs) Handles bt_them.Click
@@ -389,6 +379,11 @@ Public Class FormLop
 
     Private Sub XuấtXMLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XuấtXMLToolStripMenuItem.Click
         XuatXML.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub FormLop_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
         Me.Hide()
     End Sub
 End Class

@@ -6,21 +6,13 @@ Public Class FormGiangVien
     Private WithEvents danh_sach As BindingManagerBase
     Public lenh As String
 
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
-    End Sub
-
     Private Sub FormGiaoVien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection()
+        con = New ConnectionDB().connect()
         xuat_giangvien()
         danh_sach_moi(sender, e)
         tb_mgv.Enabled = False
     End Sub
+
     Private Sub xuat_giangvien()
         con.Open()
         Dim dap As SqlDataAdapter = New SqlDataAdapter("select * from tblGiangVien", con)
@@ -180,8 +172,6 @@ Public Class FormGiangVien
         Me.Hide()
     End Sub
 
-
-
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         FormAdmin.Show()
         Me.Hide()
@@ -207,4 +197,8 @@ Public Class FormGiangVien
         Me.Hide()
     End Sub
 
+    Private Sub FormGiangVien_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
+        Me.Hide()
+    End Sub
 End Class

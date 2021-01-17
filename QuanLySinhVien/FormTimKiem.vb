@@ -5,16 +5,8 @@ Public Class FormTimKiem
     Private con As SqlConnection
     Private WithEvents danh_sach As BindingManagerBase
     Public lenh As String
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
-    End Sub
     Private Sub FormTimKiem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        con = New ConnectionDB().connect()
     End Sub
     Private Sub xuat()
         Dim DiaChi As String = ""
@@ -61,7 +53,6 @@ Public Class FormTimKiem
         DataGridView1.DataSource = table
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Connection()
         xuat()
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -98,6 +89,11 @@ Public Class FormTimKiem
 
     Private Sub XuấtXMLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XuấtXMLToolStripMenuItem.Click
         XuatXML.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub FormTimKiem_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
         Me.Hide()
     End Sub
 

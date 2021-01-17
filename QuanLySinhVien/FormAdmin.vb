@@ -42,4 +42,8 @@
         XuatXML.Show()
         Me.Hide()
     End Sub
+
+    Private Sub FormAdmin_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
+    End Sub
 End Class

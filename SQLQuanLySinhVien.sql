@@ -56,6 +56,7 @@ select * from tblSinhVien
 select * from tblLop
 select * from tblPhong_lop
 select * from tblPhongHoc
+select * from tblTaiKhoan
 insert into tblTaiKhoan
 values ('admin','admin','abc','020','abc')
 insert into tblPhongHoc

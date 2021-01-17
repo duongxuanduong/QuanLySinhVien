@@ -51,71 +51,73 @@ Partial Class XuatXML
         'ThoátToolStripMenuItem2
         '
         Me.ThoátToolStripMenuItem2.Name = "ThoátToolStripMenuItem2"
-        Me.ThoátToolStripMenuItem2.Size = New System.Drawing.Size(49, 20)
+        Me.ThoátToolStripMenuItem2.Size = New System.Drawing.Size(59, 24)
         Me.ThoátToolStripMenuItem2.Text = "Thoát"
         '
         'ThoátToolStripMenuItem
         '
         Me.ThoátToolStripMenuItem.Name = "ThoátToolStripMenuItem"
-        Me.ThoátToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
+        Me.ThoátToolStripMenuItem.Size = New System.Drawing.Size(91, 24)
         Me.ThoátToolStripMenuItem.Text = "Đăng Xuất"
         '
         'TàiKhoảnToolStripMenuItem
         '
         Me.TàiKhoảnToolStripMenuItem.Name = "TàiKhoảnToolStripMenuItem"
-        Me.TàiKhoảnToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.TàiKhoảnToolStripMenuItem.Size = New System.Drawing.Size(147, 26)
         Me.TàiKhoảnToolStripMenuItem.Text = "Tài khoản"
         '
         'LớpHọcToolStripMenuItem
         '
         Me.LớpHọcToolStripMenuItem.Name = "LớpHọcToolStripMenuItem"
-        Me.LớpHọcToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.LớpHọcToolStripMenuItem.Size = New System.Drawing.Size(147, 26)
         Me.LớpHọcToolStripMenuItem.Text = "Lớp Học"
         '
         'GiáoToolStripMenuItem
         '
         Me.GiáoToolStripMenuItem.Name = "GiáoToolStripMenuItem"
-        Me.GiáoToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.GiáoToolStripMenuItem.Size = New System.Drawing.Size(147, 26)
         Me.GiáoToolStripMenuItem.Text = "Giáo Viên"
         '
         'HọcSinhToolStripMenuItem
         '
         Me.HọcSinhToolStripMenuItem.Name = "HọcSinhToolStripMenuItem"
-        Me.HọcSinhToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.HọcSinhToolStripMenuItem.Size = New System.Drawing.Size(147, 26)
         Me.HọcSinhToolStripMenuItem.Text = "Học Sinh"
         '
         'QuảnLýToolStripMenuItem
         '
         Me.QuảnLýToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HọcSinhToolStripMenuItem, Me.GiáoToolStripMenuItem, Me.LớpHọcToolStripMenuItem, Me.TàiKhoảnToolStripMenuItem})
         Me.QuảnLýToolStripMenuItem.Name = "QuảnLýToolStripMenuItem"
-        Me.QuảnLýToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.QuảnLýToolStripMenuItem.Size = New System.Drawing.Size(73, 24)
         Me.QuảnLýToolStripMenuItem.Text = "Quản Lý"
         '
         'HomeToolStripMenuItem
         '
         Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(62, 24)
         Me.HomeToolStripMenuItem.Text = "Home"
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(19, 19)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.QuảnLýToolStripMenuItem, Me.ThoátToolStripMenuItem, Me.TìmKiếmToolStripMenuItem, Me.XuấtXMLToolStripMenuItem, Me.ThoátToolStripMenuItem2})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(656, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(875, 28)
         Me.MenuStrip1.TabIndex = 140
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'TìmKiếmToolStripMenuItem
         '
         Me.TìmKiếmToolStripMenuItem.Name = "TìmKiếmToolStripMenuItem"
-        Me.TìmKiếmToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.TìmKiếmToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.TìmKiếmToolStripMenuItem.Text = "Tìm kiếm"
         '
         'XuấtXMLToolStripMenuItem
         '
         Me.XuấtXMLToolStripMenuItem.Name = "XuấtXMLToolStripMenuItem"
-        Me.XuấtXMLToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.XuấtXMLToolStripMenuItem.Size = New System.Drawing.Size(84, 24)
         Me.XuấtXMLToolStripMenuItem.Text = "Xuất XML"
         '
         'GroupBox1
@@ -128,9 +130,11 @@ Partial Class XuatXML
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txt_tenserver)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 82)
+        Me.GroupBox1.Location = New System.Drawing.Point(25, 101)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(618, 270)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(824, 332)
         Me.GroupBox1.TabIndex = 142
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin cấu hình"
@@ -139,17 +143,19 @@ Partial Class XuatXML
         '
         Me.txt_database.Enabled = False
         Me.txt_database.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_database.Location = New System.Drawing.Point(167, 77)
+        Me.txt_database.Location = New System.Drawing.Point(223, 95)
+        Me.txt_database.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_database.Name = "txt_database"
-        Me.txt_database.Size = New System.Drawing.Size(384, 23)
+        Me.txt_database.Size = New System.Drawing.Size(511, 26)
         Me.txt_database.TabIndex = 12
         '
         'btn_xuatxml
         '
         Me.btn_xuatxml.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_xuatxml.Location = New System.Drawing.Point(460, 210)
+        Me.btn_xuatxml.Location = New System.Drawing.Point(613, 258)
+        Me.btn_xuatxml.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_xuatxml.Name = "btn_xuatxml"
-        Me.btn_xuatxml.Size = New System.Drawing.Size(91, 31)
+        Me.btn_xuatxml.Size = New System.Drawing.Size(121, 38)
         Me.btn_xuatxml.TabIndex = 11
         Me.btn_xuatxml.Text = "Xuất xml"
         Me.btn_xuatxml.UseVisualStyleBackColor = False
@@ -158,9 +164,10 @@ Partial Class XuatXML
         '
         Me.cob_table.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cob_table.FormattingEnabled = True
-        Me.cob_table.Location = New System.Drawing.Point(167, 138)
+        Me.cob_table.Location = New System.Drawing.Point(223, 170)
+        Me.cob_table.Margin = New System.Windows.Forms.Padding(4)
         Me.cob_table.Name = "cob_table"
-        Me.cob_table.Size = New System.Drawing.Size(384, 24)
+        Me.cob_table.Size = New System.Drawing.Size(511, 28)
         Me.cob_table.TabIndex = 10
         '
         'cob_database
@@ -168,9 +175,10 @@ Partial Class XuatXML
         Me.cob_database.Enabled = False
         Me.cob_database.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cob_database.FormattingEnabled = True
-        Me.cob_database.Location = New System.Drawing.Point(167, 77)
+        Me.cob_database.Location = New System.Drawing.Point(223, 95)
+        Me.cob_database.Margin = New System.Windows.Forms.Padding(4)
         Me.cob_database.Name = "cob_database"
-        Me.cob_database.Size = New System.Drawing.Size(384, 24)
+        Me.cob_database.Size = New System.Drawing.Size(511, 28)
         Me.cob_database.TabIndex = 9
         Me.cob_database.Visible = False
         '
@@ -178,9 +186,10 @@ Partial Class XuatXML
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 138)
+        Me.Label6.Location = New System.Drawing.Point(17, 170)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 19)
+        Me.Label6.Size = New System.Drawing.Size(106, 23)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Chọn table:"
         '
@@ -188,9 +197,10 @@ Partial Class XuatXML
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(13, 82)
+        Me.Label5.Location = New System.Drawing.Point(17, 101)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 19)
+        Me.Label5.Size = New System.Drawing.Size(96, 23)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Database: "
         '
@@ -198,18 +208,20 @@ Partial Class XuatXML
         '
         Me.txt_tenserver.Enabled = False
         Me.txt_tenserver.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_tenserver.Location = New System.Drawing.Point(167, 22)
+        Me.txt_tenserver.Location = New System.Drawing.Point(223, 27)
+        Me.txt_tenserver.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_tenserver.Name = "txt_tenserver"
-        Me.txt_tenserver.Size = New System.Drawing.Size(384, 23)
+        Me.txt_tenserver.Size = New System.Drawing.Size(511, 26)
         Me.txt_tenserver.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 25)
+        Me.Label2.Location = New System.Drawing.Point(13, 31)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 19)
+        Me.Label2.Size = New System.Drawing.Size(102, 23)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tên server:"
         '
@@ -218,20 +230,22 @@ Partial Class XuatXML
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Blue
-        Me.Label1.Location = New System.Drawing.Point(159, 41)
+        Me.Label1.Location = New System.Drawing.Point(212, 50)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(385, 25)
+        Me.Label1.Size = New System.Drawing.Size(462, 30)
         Me.Label1.TabIndex = 141
         Me.Label1.Text = "XUẤT BẢNG DỮ LIỆU RA FILE XML"
         '
         'XuatXML
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(656, 359)
+        Me.ClientSize = New System.Drawing.Size(875, 442)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "XuatXML"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "XuatXML"

@@ -5,14 +5,12 @@ Public Class FormSinhVien
     Private con As SqlConnection
     Private WithEvents danh_sach As BindingManagerBase
     Public lenh As String
-
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
+    Private Sub FormHocSinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        con = New ConnectionDB().connect()
+        xuat_sinhvien()
+        xuat_malop()
+        danh_sach_moi(sender, e)
+        tb_mhs.Enabled = False
     End Sub
     Private Sub xuat_sinhvien()
         con.Open()
@@ -59,13 +57,6 @@ Public Class FormSinhVien
             con.Close()
             MsgBox("Vui lòng chọn trường cần tìm kiếm")
         End Try
-    End Sub
-    Private Sub FormHocSinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection()
-        xuat_sinhvien()
-        xuat_malop()
-        danh_sach_moi(sender, e)
-        tb_mhs.Enabled = False
     End Sub
     Private Sub bt_them_Click(sender As Object, e As EventArgs) Handles bt_them.Click
         xuat_malop()
@@ -216,6 +207,11 @@ Public Class FormSinhVien
 
     Private Sub XuấtXMLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XuấtXMLToolStripMenuItem.Click
         XuatXML.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub FormSinhVien_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
         Me.Hide()
     End Sub
 End Class

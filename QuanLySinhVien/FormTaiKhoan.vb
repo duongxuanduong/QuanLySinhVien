@@ -5,17 +5,9 @@ Public Class FormTaiKhoan
     Private WithEvents danh_sach As BindingManagerBase
     Public lenh As String
     Public tentk As String = FormDangNhap.tentk.ToString
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
-    End Sub
 
     Private Sub FormTaiKhoan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection()
+        con = New ConnectionDB().connect()
         xuat_taikhoan()
         danh_sach_moi(sender, e)
         tb_tentk.Enabled = False
@@ -112,4 +104,8 @@ Public Class FormTaiKhoan
         Me.Hide()
     End Sub
 
+    Private Sub FormTaiKhoan_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        FormDangNhap.Show()
+        Me.Hide()
+    End Sub
 End Class

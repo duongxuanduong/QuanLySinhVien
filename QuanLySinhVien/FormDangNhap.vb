@@ -4,17 +4,8 @@ Public Class FormDangNhap
     Private WithEvents danh_sach As BindingManagerBase
     Public lenh As String
     Public tentk As String
-    Private Sub Connection()
-        Dim cn As String = "Data Source=DESKTOP-A8F0E3F;Initial Catalog=QuanLySinhVien;Integrated Security=True"
-        Try
-            con = New SqlConnection(cn)
-        Catch ex As Exception
-            MessageBox.Show("Lỗi")
-        End Try
-    End Sub
-
     Private Sub bt_dangnhap_Click(sender As Object, e As EventArgs) Handles bt_dangnhap.Click
-        Connection()
+        con = New ConnectionDB().connect()
         Try
             con.Open()
             Dim dap As SqlDataAdapter = New SqlDataAdapter("select * from tblTaiKhoan where TenTK = '" & tb_taikhoan.Text & "' And MatKhau = '" & tb_matkhau.Text & "'", con)
